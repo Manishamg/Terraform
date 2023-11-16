@@ -1,8 +1,8 @@
 //this is a test for jenkins and git not jenkins and terraform
 pipeline{
   agent {label "slave-node-label"}
-  stages{
-    stage ("Test"){
+  stage ("Test"){
+    steps {
       echo "Testing for jenkins and git is successful"
     }
   }
