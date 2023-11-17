@@ -1,0 +1,36 @@
+pipeline {
+	agent any
+	stages{
+		stage ("terra-version")
+		{
+			steps{
+				sh "terraform --version"
+			}
+		}
+		stage ("terra-initialization")
+		{
+			steps{
+				sh "terraform init"
+			}
+		}
+		stage ("terra-validation")
+		{
+			steps{
+				sh "terraform validate"
+			}
+		}
+		stage ("terra-plan")
+		{
+			steps{
+				sh "terraform plan"
+			}
+		}
+		stage ("terra-apply")
+		{
+			steps{
+				sh "terraform apply"
+			}
+		}
+	}
+
+}
