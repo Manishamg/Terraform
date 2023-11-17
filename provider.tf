@@ -11,6 +11,6 @@ terraform {
 }
 
 output "sample_variable_check" {
-        value  = var.variable_check
+        value  = var.variable
 }
 
