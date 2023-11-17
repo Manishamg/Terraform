@@ -34,7 +34,8 @@ pipeline {
 		stage ("terra-apply")
 		{
 			steps{
-				sh "terraform apply"
+				//sh "terraform apply"
+				sh "terraform apply -auto-approve -var 'parameter_name=${env.variable_check}'"
 			}
 		}
 	}
