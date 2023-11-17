@@ -4,7 +4,7 @@ pipeline {
 		stage ("checkout")
 		{
 			steps{
-			    sh "checkout scm"
+			     checkout scm
 			}
 		}
 		stage ("terra-version")
