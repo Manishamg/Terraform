@@ -1,9 +1,9 @@
 pipeline {
 	agent any
-	stages{
-		environment {
+	environment {
         		variable_check = "${params.variable_check}"
-   	 	}
+   	 }
+	stages{
 		stage ("terra-version")
 		{
 			steps{
