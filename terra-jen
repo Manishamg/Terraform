@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-        		variable_check = "${params.variable_check}"
+        		variable = "${params.variable}"
    	 }
 	stages{
 		stage ("terra-version")
@@ -32,7 +32,7 @@ pipeline {
 		{
 			steps{
 				//sh "terraform apply"
-				sh "terraform apply -auto-approve -var 'variable_check=${env.variable_check}'"
+				sh "terraform apply -auto-approve -var 'variable=${env.variable}'"
 			}
 		}
 	}
